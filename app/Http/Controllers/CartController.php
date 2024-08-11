@@ -40,7 +40,7 @@ class CartController extends Controller
                         $productAlredyExist=true;
                     }
                 }
-
+//want to work on this again
                 if($productAlredyExist == false){
                     Cart::add($product->id,$product->title,1,$product->price,['productImage'=>(!empty($product->product_images->first()) ? $product->product_images->first() : '')]);
                     $status = true;
