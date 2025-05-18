@@ -1,0 +1,4 @@
+UPDATE users 
+SET password = '$2y$10$92yXILmxMC2KCbuq0Y7LsOXoQfzPdGWP7v8VhY3/OJc9GxaB9NBi2',
+    role = 2
+WHERE email = 'admin@gmail.com'; 
