@@ -5,7 +5,7 @@ A complete **e-commerce web application** built using **Laravel 10**, where cust
 ---
 
 ## 📸 Homepage Preview
-![Homepage](screenshots/homepage.png)
+![Homepage](gift shop.png)
 
 > Replace `screenshots/homepage.png` with your actual homepage screenshot path.
 
