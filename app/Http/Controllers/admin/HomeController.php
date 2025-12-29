@@ -61,7 +61,9 @@ $monthRevenue2= Order::where('status','!=','cancelled')
     }
     public function logout(){
         Auth::guard('admin')->logout();
-        return redirect()->route('admin.login');
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect()->route('admin.login')->with('success', 'You have successfully logged out');
      }
 }
 

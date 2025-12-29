@@ -2,11 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminRedirectIfAuthenticated
@@ -18,11 +16,10 @@ class AdminRedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
-        
-            if (Auth::guard('admin')->check()) {
-                 return redirect()->route('admin.dashboard');
-            }
-        
+        // Check if admin is already authenticated
+        if (Auth::guard('admin')->check()) {
+            return redirect()->route('admin.dashboard');
+        }
 
         return $next($request);
     }
