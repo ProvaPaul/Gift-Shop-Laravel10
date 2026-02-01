@@ -7,7 +7,7 @@ A complete **e-commerce web application** built using **Laravel 10**, where cust
 
 ## 🎥 Project Demo Video
 ▶️ Watch the full project explanation and demo here:  
-[https://youtu.be/your-video-link](https://youtu.be/ypnMgx07rOE?si=tM29KVE_53FugVr1)
+[https://youtu.be/project-video-link](https://youtu.be/ypnMgx07rOE?si=tM29KVE_53FugVr1)
 
 ---
 
