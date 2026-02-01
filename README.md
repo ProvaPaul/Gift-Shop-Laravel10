@@ -4,16 +4,10 @@ A complete **e-commerce web application** built using **Laravel 10**, where cust
 
 ---
 
-## 📸 Homepage Preview
-![Homepage](gift shop.png)
-
-> Replace `screenshots/homepage.png` with your actual homepage screenshot path.
-
----
 
 ## 🎥 Project Demo Video
 ▶️ Watch the full project explanation and demo here:  
-https://youtu.be/your-video-link
+[https://youtu.be/your-video-link](https://youtu.be/ypnMgx07rOE?si=tM29KVE_53FugVr1)
 
 ---
 
