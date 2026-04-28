@@ -11,6 +11,12 @@ A complete **e-commerce web application** built using **Laravel 10**, where cust
 
 ---
 
+
+## 🧩 System Design Diagram
+
+![System Diagram](mermaid-diagram1.png)
+
+---
 ## 🚀 Project Overview
 
 This project consists of two main parts:
