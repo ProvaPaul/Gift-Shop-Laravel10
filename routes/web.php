@@ -35,7 +35,7 @@ use Illuminate\HTTP\Request;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/  
+*/
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -85,7 +85,7 @@ Route::post('/process-register',[AuthController::class,'processRegister'])->name
 Route::get('/login',[AuthController::class,'login'])->name('account.login');
 Route::post('/login',[AuthController::class,'authenticate'])->name('account.authenticate');
 
-        
+
 
 
     });
@@ -102,7 +102,7 @@ Route::post('/login',[AuthController::class,'authenticate'])->name('account.auth
 
 
 
-        
+
 
     });
 });
@@ -118,8 +118,8 @@ Route::group(['prefix'=> 'admin'],function(){
 
     });
 
-    
-    
+
+
     Route::group(['middleware'=>'admin.auth'],function(){
         Route::get('/dashboard',[HomeController::class,'index'])->name('admin.dashboard');
         Route::get('/logout',[HomeController::class,'logout'])->name('admin.logout');
@@ -156,9 +156,9 @@ Route::group(['prefix'=> 'admin'],function(){
          Route::get('/products/create',[ProductController::class,'create'])->name('products.create');
          Route::post('/products',[ProductController::class,'store'])->name('products.store');
          Route::get('/product-subcategories',[ProductSubCategoryController::class,'index'])->name('product-subcategories.index');
- 
+
          Route::get('/products/{product}/edit',[ProductController::class,'edit'])->name('products.edit');
- 
+
          Route::put('/products/{product}',[ProductController::class,'update'])->name('products.update');
 
          Route::post('/product-images/update',[ProductImageController::class,'update'])->name('product-images.update');
@@ -174,13 +174,13 @@ Route::group(['prefix'=> 'admin'],function(){
          Route::get('/shipping/{id}',[ShippingController::class,'edit'])->name('shipping.edit');
          Route::post('/shipping/{id}',[ShippingController::class,'update'])->name('shipping.update');
          Route::delete('/shipping/{id}',[ShippingController::class,'destroy'])->name('shipping.delete');
-        
+
          Route::get('/orders',[OrderController::class,'index'])->name('orders.index');
          Route::get('/orders/{id}',[OrderController::class,'detail'])->name('orders.detail');
          Route::post('/order/change-status/{id}',[OrderController::class,'changeOrderStatus'])->name('orders.changeOrderStatus');
          Route::post('/order/send-email/{id}',[OrderController::class,'sendInvoiceEmail'])->name('orders.sendInvoiceEmail');
          Route::get('/order/downloadPdf', [OrderController::class, 'downloadPdf'])->name('orders.downloadPdf');
-         
+
         Route::get('/orders/add', [OrderController::class, 'new'])->name('orders.new');
 
         //user routes

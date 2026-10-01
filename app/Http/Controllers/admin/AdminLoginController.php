@@ -32,10 +32,6 @@ class AdminLoginController extends Controller
                 Auth::guard('web')->logout();
             }
             
-            // Clear all sessions to ensure clean state
-            $request->session()->flush();
-            $request->session()->regenerate();
-            
             // Attempt admin authentication
             if (Auth::guard('admin')->attempt([
                 'email' => $request->email,
@@ -45,8 +41,10 @@ class AdminLoginController extends Controller
                 $admin = Auth::guard('admin')->user();
                 
                 if ($admin->role == 2) {
-                    // Regenerate session after successful login
-                    $request->session()->regenerate();
+                    // Ensure web guard is still logged out
+                    if (Auth::guard('web')->check()) {
+                        Auth::guard('web')->logout();
+                    }
                     
                     return redirect()->route('admin.dashboard');
                 } else {
